@@ -3,3 +3,6 @@
 ################################################################################
 
 /.vs
+/PokeList_WebApi/bin
+/PokeList_WebApi/obj
+/PokeList_WebApi/Properties/PublishProfiles
