@@ -1,23 +1,24 @@
-﻿using System;
+﻿using PokeList_WebApi.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using PokeList_WebApi.Models;
-using Newtonsoft.Json.Linq;
 
 namespace PokeList_WebApi.Controllers
 {
-    public class PokemonController : ApiController
+    public class PokemonTypeController : ApiController
     {
-        
-        public PokemonController()
+        /// <summary>
+        /// Constructor of Pokemon Type Controller
+        /// </summary>
+        public PokemonTypeController()
         {
-            if(PokeDB.pokemons == null)
+            if (PokeDB.pokemons == null)
             {
                 PokeDB.pokemons = new List<Pokemon>();
-                if(PokeDB.pokemons.Count == 0)
+                if (PokeDB.pokemons.Count == 0)
                 {
                     #region pokeJson Loading
                     string pokeJson;
@@ -29,49 +30,23 @@ namespace PokeList_WebApi.Controllers
                 }
             }
         }
-        // GET api/pokemon
+        // GET api/pokemonType
         /// <summary>
-        /// Return all pokemons
+        /// Return all pokemon types
         /// </summary>
         /// <returns>List of Pokemons</returns>
-        public List<Pokemon> Get()
+        public List<string> Get()
         {
-            return PokeDB.pokemons;
-        }
-
-        // GET api/pokemon/5
-        public Pokemon Get(int id)
-        {
-            Pokemon pokemon = null;
-            pokemon = PokeDB.pokemons.Where(p => Convert.ToInt32(p.number) == id).FirstOrDefault();
-            return pokemon;
-        }
-
-        // GET api/pokemon/search/Bul
-        [ActionName("search")]
-        public IEnumerable<Pokemon> GetPokemonByName(string name)
-        {
-            if (!String.IsNullOrEmpty(name))
+            var types = new List<string>();
+            var sourcesTypes = PokeDB.pokemons.Select(p => p.types.Select(t => t)).Distinct();
+            foreach (IEnumerable<string> listOfTypes in sourcesTypes)
             {
-                var pokemons = PokeDB.pokemons.Where(p => p.name.ToLowerInvariant().StartsWith(name.ToLowerInvariant()));
-                return pokemons.OrderBy(pokemon => pokemon.name);
+                foreach (string type in listOfTypes)
+                {
+                    types.Add(type);
+                }
             }
-            return null;
-        }
-
-        // GET api/pokemon/byType/Fire
-        [ActionName("byType")]
-        public IEnumerable<Pokemon> GetPokemonByType(string name)
-        {
-            var pokemons = PokeDB.pokemons.Where(p => p.types.Contains(FirstCharToUpper(name))).ToList<Pokemon>();
-            return pokemons;
-        }
-
-        public static string FirstCharToUpper(string input)
-        {
-            if (String.IsNullOrEmpty(input))
-                throw new ArgumentException("ARGH!");
-            return input.First().ToString().ToUpper() + input.Substring(1);
+            return types;
         }
     }
 }

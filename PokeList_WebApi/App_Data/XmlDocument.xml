@@ -487,5 +487,16 @@
             </summary>
             <returns>List of Pokemons</returns>
         </member>
+        <member name="M:PokeList_WebApi.Controllers.PokemonTypeController.#ctor">
+            <summary>
+            Constructor of Pokemon Type Controller
+            </summary>
+        </member>
+        <member name="M:PokeList_WebApi.Controllers.PokemonTypeController.Get">
+            <summary>
+            Return all pokemon types
+            </summary>
+            <returns>List of Pokemons</returns>
+        </member>
     </members>
 </doc>
