@@ -40,6 +40,11 @@ namespace PokeList_WebApi.Controllers
         }
 
         // GET api/pokemon/5
+        /// <summary>
+        /// Get the pokemon for matching id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public Pokemon Get(int id)
         {
             Pokemon pokemon = null;

@@ -8,12 +8,9 @@ using System.Web.Http;
 
 namespace PokeList_WebApi.Controllers
 {
-    public class PokemonTypeController : ApiController
+    public class PokemonAttackController : ApiController
     {
-        /// <summary>
-        /// Constructor of Pokemon Type Controller
-        /// </summary>
-        public PokemonTypeController()
+        public PokemonAttackController()
         {
             if (PokeDB.pokemons == null)
             {
@@ -30,25 +27,31 @@ namespace PokeList_WebApi.Controllers
                 }
             }
         }
-        // GET api/pokemonType
+
+        // GET api/pokemonAttack
         /// <summary>
-        /// Return all pokemon types
+        /// Return all pokemon attacks name
         /// </summary>
-        /// <returns>List of Pokemons</returns>
+        /// <returns>List of attacks name</returns>
         public List<string> Get()
         {
-            var types = new List<string>();
-            var sourcesTypes = PokeDB.pokemons.Select(p => p.types.Select(t => t)).Distinct();
-            foreach (IEnumerable<string> listOfTypes in sourcesTypes)
+            var attacks = new List<string>();
+            var sourcesFastAttacks = PokeDB.pokemons.Select(p => p.fastAttacks.Select(t => t.name)).Distinct();
+            var sourcesSpecialAttacks = PokeDB.pokemons.Select(p => p.specialAttacks.Select(t => t.name)).Distinct();
+            var sourceAttack = sourcesFastAttacks.Union(sourcesSpecialAttacks).Distinct();
+            foreach (IEnumerable<string> listOfAttacks in sourceAttack)
             {
-                foreach (string type in listOfTypes)
+                foreach (string attack in listOfAttacks)
                 {
-                    types.Add(type);
+                    if (!String.IsNullOrEmpty(attack))
+                    {
+                        attacks.Add(attack);
+                    }
                 }
             }
-            types.Sort();
-            types = types.Distinct().ToList();
-            return types;
+            attacks.Sort();
+            attacks = attacks.Distinct().ToList();
+            return attacks;
         }
     }
 }
