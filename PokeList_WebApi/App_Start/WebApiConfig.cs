@@ -30,8 +30,7 @@ namespace PokeList_WebApi
             config.Routes.MapHttpRoute(
                 name: "SearchApi",
                 routeTemplate: "api/{controller}/{action}/{name}",
-                defaults: null,
-                constraints: new { name = @"^[a-z]+$" }
+                defaults: null
             );
         }
     }

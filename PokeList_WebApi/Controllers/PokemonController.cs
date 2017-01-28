@@ -62,7 +62,7 @@ namespace PokeList_WebApi.Controllers
             {
                 if (int.TryParse(name, out pokemonId))
                 {
-                    pokemons = PokeDB.pokemons.Where(p => p.number == pokemonId.ToString());
+                    pokemons = PokeDB.pokemons.Where(p => Convert.ToInt32(p.number) == pokemonId);
                 }
                 else
                 {
@@ -74,7 +74,9 @@ namespace PokeList_WebApi.Controllers
         }
 
         // GET api/pokemon/search/Bul
+        [HttpGet]
         [ActionName("search")]
+        [Route("api/pokemon/search/{name}/{type1}/{type2}")]
         public IEnumerable<Pokemon> searchPokemon(string name, string type1, string type2)
         {
             int pokemonId = 0;
@@ -83,11 +85,11 @@ namespace PokeList_WebApi.Controllers
             {
                 if(int.TryParse(name, out pokemonId))
                 {
-                    pokemons = PokeDB.pokemons.Where(p => p.number == pokemonId.ToString());
+                    pokemons = PokeDB.pokemons.Where(p => Convert.ToInt32(p.number) == pokemonId && p.types.Contains(type1) && p.types.Contains(type2));
                 }
                 else
                 {
-                    pokemons = PokeDB.pokemons.Where(p => p.name.ToLowerInvariant().StartsWith(name.ToLowerInvariant()));
+                    pokemons = PokeDB.pokemons.Where(p => p.name.ToLowerInvariant().StartsWith(name.ToLowerInvariant()) && p.types.Contains(type1) && p.types.Contains(type2));
                 }
                 return pokemons.OrderBy(pokemon => pokemon.name);
             }
