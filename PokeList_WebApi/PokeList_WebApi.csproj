@@ -259,7 +259,6 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
-    <Content Include="pokelist.PublishSettings" />
     <Content Include="ClassDiagram1.cd" />
     <None Include="Properties\PublishProfiles\pokelist - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\pokelist - Web Deploy.pubxml" />

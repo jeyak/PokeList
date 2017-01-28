@@ -56,9 +56,39 @@ namespace PokeList_WebApi.Controllers
         [ActionName("search")]
         public IEnumerable<Pokemon> GetPokemonByName(string name)
         {
+            int pokemonId = 0;
+            IEnumerable<Pokemon> pokemons;
             if (!String.IsNullOrEmpty(name))
             {
-                var pokemons = PokeDB.pokemons.Where(p => p.name.ToLowerInvariant().StartsWith(name.ToLowerInvariant()));
+                if (int.TryParse(name, out pokemonId))
+                {
+                    pokemons = PokeDB.pokemons.Where(p => p.number == pokemonId.ToString());
+                }
+                else
+                {
+                    pokemons = PokeDB.pokemons.Where(p => p.name.ToLowerInvariant().StartsWith(name.ToLowerInvariant()));
+                }
+                return pokemons.OrderBy(pokemon => pokemon.name);
+            }
+            return null;
+        }
+
+        // GET api/pokemon/search/Bul
+        [ActionName("search")]
+        public IEnumerable<Pokemon> searchPokemon(string name, string type1, string type2)
+        {
+            int pokemonId = 0;
+            IEnumerable<Pokemon> pokemons;
+            if (!String.IsNullOrEmpty(name))
+            {
+                if(int.TryParse(name, out pokemonId))
+                {
+                    pokemons = PokeDB.pokemons.Where(p => p.number == pokemonId.ToString());
+                }
+                else
+                {
+                    pokemons = PokeDB.pokemons.Where(p => p.name.ToLowerInvariant().StartsWith(name.ToLowerInvariant()));
+                }
                 return pokemons.OrderBy(pokemon => pokemon.name);
             }
             return null;
