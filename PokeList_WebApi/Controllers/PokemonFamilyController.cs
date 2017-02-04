@@ -58,5 +58,33 @@ namespace PokeList_WebApi.Controllers
             }
             return family;
         }
+
+        [ActionName("ids")]
+        [Route("api/pokemonFamily/ids/{id}")]
+        public List<int> GetIds(int id)
+        {
+            List<int> family = new List<int>();
+            Pokemon currentPokemon = PokeDB.pokemons.Where(p => Convert.ToInt32(p.number) == id).First();
+
+            if (currentPokemon.previousEvolutions != null)
+            {
+                Pokemon tmpPokemon = currentPokemon;
+                foreach (PreviousEvolution previousEvol in currentPokemon.previousEvolutions)
+                {
+                    Pokemon pokemon = PokeDB.pokemons.Where(p => Convert.ToInt32(p.number) == Convert.ToInt32(previousEvol.number)).First();
+                    family.Add(Convert.ToInt32(pokemon.number));
+                }
+            }
+            family.Add(Convert.ToInt32(currentPokemon.number));
+            if (currentPokemon.nextEvolutions != null)
+            {
+                foreach (NextEvolution nextEvol in currentPokemon.nextEvolutions)
+                {
+                    Pokemon pokemon = PokeDB.pokemons.Where(p => Convert.ToInt32(p.number) == Convert.ToInt32(nextEvol.number)).First();
+                    family.Add(Convert.ToInt32(pokemon.number));
+                }
+            }
+            return family;
+        }
     }
 }
