@@ -652,5 +652,90 @@
             List of french translated pokemon
             </summary>
         </member>
+        <member name="T:PokeList_WebApi.Models.Pokemon">
+            <summary>
+            Pokemon's Data
+            </summary>
+        </member>
+        <member name="P:PokeList_WebApi.Models.Pokemon.number">
+            <summary>
+            Id (or number) of the Pokemon
+            </summary>
+        </member>
+        <member name="P:PokeList_WebApi.Models.Pokemon.name">
+            <summary>
+            Name of the Pokemon
+            </summary>
+        </member>
+        <member name="P:PokeList_WebApi.Models.Pokemon.classification">
+            <summary>
+            Description of the Pokemon
+            </summary>
+        </member>
+        <member name="P:PokeList_WebApi.Models.Pokemon.types">
+            <summary>
+            Types of the Pokemon
+            </summary>
+        </member>
+        <member name="P:PokeList_WebApi.Models.Pokemon.resistant">
+            <summary>
+            Resistant of the Pokemon
+            </summary>
+        </member>
+        <member name="P:PokeList_WebApi.Models.Pokemon.weaknesses">
+            <summary>
+            Weaknesses of the Pokemon
+            </summary>
+        </member>
+        <member name="P:PokeList_WebApi.Models.Pokemon.fastAttacks">
+            <summary>
+            List of FastAttacks of the Pokemon
+            </summary>
+        </member>
+        <member name="P:PokeList_WebApi.Models.Pokemon.specialAttacks">
+            <summary>
+            List of SpecialAttacks of the Pokemon
+            </summary>
+        </member>
+        <member name="P:PokeList_WebApi.Models.Pokemon.weight">
+            <summary>
+            Weight of the Pokemon
+            </summary>
+        </member>
+        <member name="P:PokeList_WebApi.Models.Pokemon.height">
+            <summary>
+            Height of the Pokemon
+            </summary>
+        </member>
+        <member name="P:PokeList_WebApi.Models.Pokemon.fleeRate">
+            <summary>
+            Flee Rate of the Pokemon
+            </summary>
+        </member>
+        <member name="P:PokeList_WebApi.Models.Pokemon.nextEvolutionRequirements">
+            <summary>
+            Next Evolution Requirements
+            </summary>
+        </member>
+        <member name="P:PokeList_WebApi.Models.Pokemon.nextEvolutions">
+            <summary>
+            List of Next Evolution of the Pokemon
+            </summary>
+        </member>
+        <member name="P:PokeList_WebApi.Models.Pokemon.previousEvolutions">
+            <summary>
+            List of Previous Evolution of the Pokemon
+            </summary>
+        </member>
+        <member name="P:PokeList_WebApi.Models.Pokemon.maxCP">
+            <summary>
+            Max CP of the Pokemon
+            </summary>
+        </member>
+        <member name="P:PokeList_WebApi.Models.Pokemon.maxHP">
+            <summary>
+            Max HP of the Pokemon
+            </summary>
+        </member>
     </members>
 </doc>
