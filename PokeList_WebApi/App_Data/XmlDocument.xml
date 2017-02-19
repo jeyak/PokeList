@@ -481,22 +481,155 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
-        <member name="M:PokeList_WebApi.Controllers.PokemonController.Get">
+        <member name="M:PokeList_WebApi.Controllers.PokemonAttackController.Get">
+            <summary>
+            Return all pokemon attacks name
+            </summary>
+            <returns>List of attacks name</returns>
+        </member>
+        <member name="T:PokeList_WebApi.Controllers.PokemonEnController">
+            <summary>
+            PokemonController (English version)
+            </summary>
+        </member>
+        <member name="M:PokeList_WebApi.Controllers.PokemonEnController.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:PokeList_WebApi.Controllers.PokemonEnController.Get">
             <summary>
             Return all pokemons
             </summary>
             <returns>List of Pokemons</returns>
         </member>
-        <member name="M:PokeList_WebApi.Controllers.PokemonTypeController.#ctor">
+        <member name="M:PokeList_WebApi.Controllers.PokemonEnController.Get(System.Int32)">
             <summary>
-            Constructor of Pokemon Type Controller
+            Get the pokemon for matching id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PokeList_WebApi.Controllers.PokemonEnController.GetPokemonByName(System.String)">
+            <summary>
+            Get the pokemon for the name starting with search pattern 
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PokeList_WebApi.Controllers.PokemonEnController.searchPokemon(System.String,System.String,System.String)">
+            <summary>
+            Get the pokemon for the name starting with search pattern and types
+            </summary>
+            <param name="name"></param>
+            <param name="type1"></param>
+            <param name="type2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PokeList_WebApi.Controllers.PokemonEnController.GetPokemonByType(System.String)">
+            <summary>
+            Get the pokemons by types
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PokeList_WebApi.Controllers.PokemonEnController.FirstCharToUpper(System.String)">
+            <summary>
+            Capitalize
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PokeList_WebApi.Controllers.PokemonFamilyController.Get(System.Int32)">
+            <summary>
+            Return the pokemon and it's next and previous Evolution
+            </summary>
+            <returns>List of attacks name</returns>
+        </member>
+        <member name="M:PokeList_WebApi.Controllers.PokemonFamilyController.GetIds(System.Int32)">
+            <summary>
+            Return the id of pokemon and it's next and previous Evolution ids
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PokeList_WebApi.Controllers.PokemonFrController">
+            <summary>
+            PokemonController (French version)
             </summary>
         </member>
-        <member name="M:PokeList_WebApi.Controllers.PokemonTypeController.Get">
+        <member name="M:PokeList_WebApi.Controllers.PokemonFrController.#ctor">
             <summary>
-            Return all pokemon types
+            Constructor
+            </summary>
+        </member>
+        <member name="M:PokeList_WebApi.Controllers.PokemonFrController.Get">
+            <summary>
+            Return all pokemons
             </summary>
             <returns>List of Pokemons</returns>
+        </member>
+        <member name="M:PokeList_WebApi.Controllers.PokemonFrController.Get(System.Int32)">
+            <summary>
+            Get the pokemon for matching id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PokeList_WebApi.Controllers.PokemonFrController.GetPokemonByName(System.String)">
+            <summary>
+            Get the pokemon for the name starting with search pattern 
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PokeList_WebApi.Controllers.PokemonFrController.searchPokemon(System.String,System.String,System.String)">
+            <summary>
+            Get the pokemon for the name starting with search pattern and types
+            </summary>
+            <param name="name"></param>
+            <param name="type1"></param>
+            <param name="type2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PokeList_WebApi.Controllers.PokemonFrController.GetPokemonByType(System.String)">
+            <summary>
+            Get the pokemons by types
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PokeList_WebApi.Controllers.PokemonFrController.FirstCharToUpper(System.String)">
+            <summary>
+            Capitalize
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PokeList_WebApi.Models.PokeDB">
+            <summary>
+            PokeList DataBase (From Json String)
+            </summary>
+        </member>
+        <member name="P:PokeList_WebApi.Models.PokeDB.pokeJsonEn">
+            <summary>
+            English Json string
+            </summary>
+        </member>
+        <member name="P:PokeList_WebApi.Models.PokeDB.pokeJsonFr">
+            <summary>
+            French Json string
+            </summary>
+        </member>
+        <member name="F:PokeList_WebApi.Models.PokeDB.pokemonsEn">
+            <summary>
+            List of english translated pokemon
+            </summary>
+        </member>
+        <member name="F:PokeList_WebApi.Models.PokeDB.pokemonsFr">
+            <summary>
+            List of french translated pokemon
+            </summary>
         </member>
     </members>
 </doc>

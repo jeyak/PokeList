@@ -9,8 +9,14 @@ using System.Web.Http;
 
 namespace PokeList_WebApi.Controllers
 {
+    /// <summary>
+    /// PokemonController (English version)
+    /// </summary>
     public class PokemonEnController : ApiController
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public PokemonEnController()
         {
             if (PokeDB.pokemonsEn == null)
@@ -48,6 +54,11 @@ namespace PokeList_WebApi.Controllers
         }
 
         // GET api/pokemon/search/Bul
+        /// <summary>
+        /// Get the pokemon for the name starting with search pattern 
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         [ActionName("search")]
         public IEnumerable<Pokemon> GetPokemonByName(string name)
         {
@@ -69,6 +80,13 @@ namespace PokeList_WebApi.Controllers
         }
 
         // GET api/pokemon/search/Bul
+        /// <summary>
+        /// Get the pokemon for the name starting with search pattern and types
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="type1"></param>
+        /// <param name="type2"></param>
+        /// <returns></returns>
         [HttpGet]
         [ActionName("search")]
         [Route("api/pokemon/search/{name}/{type1}/{type2}")]
@@ -91,7 +109,12 @@ namespace PokeList_WebApi.Controllers
             return null;
         }
 
-        // GET api/pokemon/byType/Feu
+        // GET api/pokemon/byType/Fire
+        /// <summary>
+        /// Get the pokemons by types
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         [ActionName("byType")]
         public IEnumerable<Pokemon> GetPokemonByType(string name)
         {
@@ -99,6 +122,11 @@ namespace PokeList_WebApi.Controllers
             return pokemons;
         }
 
+        /// <summary>
+        /// Capitalize
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         public static string FirstCharToUpper(string input)
         {
             if (String.IsNullOrEmpty(input))

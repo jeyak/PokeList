@@ -26,7 +26,7 @@ namespace PokeList_WebApi.Controllers
 
         // GET api/pokemonAttack
         /// <summary>
-        /// Return all pokemon attacks name
+        /// Return the pokemon and it's next and previous Evolution
         /// </summary>
         /// <returns>List of attacks name</returns>
         public List<Pokemon> Get(int id)
@@ -55,6 +55,11 @@ namespace PokeList_WebApi.Controllers
             return family;
         }
 
+        /// <summary>
+        /// Return the id of pokemon and it's next and previous Evolution ids
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [ActionName("ids")]
         [Route("api/pokemonFamily/ids/{id}")]
         public List<int> GetIds(int id)
