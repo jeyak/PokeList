@@ -481,6 +481,17 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="T:PokeList_WebApi.Controllers.HomeController">
+            <summary>
+            HomeController
+            </summary>
+        </member>
+        <member name="M:PokeList_WebApi.Controllers.HomeController.Index">
+            <summary>
+            Index
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:PokeList_WebApi.Controllers.PokemonAttackController.Get">
             <summary>
             Return all pokemon attacks name
@@ -507,31 +518,31 @@
             <summary>
             Get the pokemon for matching id
             </summary>
-            <param name="id"></param>
-            <returns></returns>
+            <param name="id">Id of Pokemon (Exemple : 25 is the id of Pikachu</param>
+            <returns>Pokemon</returns>
         </member>
         <member name="M:PokeList_WebApi.Controllers.PokemonEnController.GetPokemonByName(System.String)">
             <summary>
             Get the pokemon for the name starting with search pattern 
             </summary>
             <param name="name"></param>
-            <returns></returns>
+            <returns>List of Pokemons</returns>
         </member>
         <member name="M:PokeList_WebApi.Controllers.PokemonEnController.searchPokemon(System.String,System.String,System.String)">
             <summary>
             Get the pokemon for the name starting with search pattern and types
             </summary>
-            <param name="name"></param>
-            <param name="type1"></param>
-            <param name="type2"></param>
-            <returns></returns>
+            <param name="name">Name of Pokemon (Exemple : Pikachu)</param>
+            <param name="type1">First type of the Pokemon (Exemple : Fire)</param>
+            <param name="type2">Second type of the Pokemon (Exemple : Flying)</param>
+            <returns>List of Pokemons</returns>
         </member>
         <member name="M:PokeList_WebApi.Controllers.PokemonEnController.GetPokemonByType(System.String)">
             <summary>
             Get the pokemons by types
             </summary>
-            <param name="name"></param>
-            <returns></returns>
+            <param name="name">Name of Pokemon (Exemple : Pikachu)</param>
+            <returns>List of Pokemons</returns>
         </member>
         <member name="M:PokeList_WebApi.Controllers.PokemonEnController.FirstCharToUpper(System.String)">
             <summary>
@@ -540,17 +551,27 @@
             <param name="input"></param>
             <returns></returns>
         </member>
+        <member name="T:PokeList_WebApi.Controllers.PokemonFamilyController">
+            <summary>
+            Pokemon Family (Pokemon + Next and Previous Evolution)
+            </summary>
+        </member>
+        <member name="M:PokeList_WebApi.Controllers.PokemonFamilyController.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
         <member name="M:PokeList_WebApi.Controllers.PokemonFamilyController.Get(System.Int32)">
             <summary>
             Return the pokemon and it's next and previous Evolution
             </summary>
-            <returns>List of attacks name</returns>
+            <returns>List of Pokemon</returns>
         </member>
         <member name="M:PokeList_WebApi.Controllers.PokemonFamilyController.GetIds(System.Int32)">
             <summary>
             Return the id of pokemon and it's next and previous Evolution ids
             </summary>
-            <param name="id"></param>
+            <param name="id">Id of Pokemon (Exemple : 25 is the id of Pikachu</param>
             <returns></returns>
         </member>
         <member name="T:PokeList_WebApi.Controllers.PokemonFrController">
@@ -573,24 +594,24 @@
             <summary>
             Get the pokemon for matching id
             </summary>
-            <param name="id"></param>
+            <param name="id">Id of Pokemon (Exemple : 25 is the id of Pikachu)</param>
             <returns></returns>
         </member>
         <member name="M:PokeList_WebApi.Controllers.PokemonFrController.GetPokemonByName(System.String)">
             <summary>
             Get the pokemon for the name starting with search pattern 
             </summary>
-            <param name="name"></param>
+            <param name="name">Name of Pokemon (Exemple : Pikachu)</param>
             <returns></returns>
         </member>
         <member name="M:PokeList_WebApi.Controllers.PokemonFrController.searchPokemon(System.String,System.String,System.String)">
             <summary>
             Get the pokemon for the name starting with search pattern and types
             </summary>
-            <param name="name"></param>
-            <param name="type1"></param>
-            <param name="type2"></param>
-            <returns></returns>
+            <param name="name">Name of Pokemon (Exemple : Pikachu)</param>
+            <param name="type1">First type of the Pokemon (Exemple : Fire)</param>
+            <param name="type2">Second type of the Pokemon (Exemple : Flying)</param>
+            <returns>List of Pokemons</returns>
         </member>
         <member name="M:PokeList_WebApi.Controllers.PokemonFrController.GetPokemonByType(System.String)">
             <summary>

@@ -44,8 +44,8 @@ namespace PokeList_WebApi.Controllers
         /// <summary>
         /// Get the pokemon for matching id
         /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
+        /// <param name="id">Id of Pokemon (Exemple : 25 is the id of Pikachu</param>
+        /// <returns>Pokemon</returns>
         public Pokemon Get(int id)
         {
             Pokemon pokemon = null;
@@ -58,7 +58,7 @@ namespace PokeList_WebApi.Controllers
         /// Get the pokemon for the name starting with search pattern 
         /// </summary>
         /// <param name="name"></param>
-        /// <returns></returns>
+        /// <returns>List of Pokemons</returns>
         [ActionName("search")]
         public IEnumerable<Pokemon> GetPokemonByName(string name)
         {
@@ -83,10 +83,10 @@ namespace PokeList_WebApi.Controllers
         /// <summary>
         /// Get the pokemon for the name starting with search pattern and types
         /// </summary>
-        /// <param name="name"></param>
-        /// <param name="type1"></param>
-        /// <param name="type2"></param>
-        /// <returns></returns>
+        /// <param name="name">Name of Pokemon (Exemple : Pikachu)</param>
+        /// <param name="type1">First type of the Pokemon (Exemple : Fire)</param>
+        /// <param name="type2">Second type of the Pokemon (Exemple : Flying)</param>
+        /// <returns>List of Pokemons</returns>
         [HttpGet]
         [ActionName("search")]
         [Route("api/pokemon/search/{name}/{type1}/{type2}")]
@@ -113,8 +113,8 @@ namespace PokeList_WebApi.Controllers
         /// <summary>
         /// Get the pokemons by types
         /// </summary>
-        /// <param name="name"></param>
-        /// <returns></returns>
+        /// <param name="name">Name of Pokemon (Exemple : Pikachu)</param>
+        /// <returns>List of Pokemons</returns>
         [ActionName("byType")]
         public IEnumerable<Pokemon> GetPokemonByType(string name)
         {

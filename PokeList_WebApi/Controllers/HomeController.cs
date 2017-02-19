@@ -6,11 +6,18 @@ using System.Web.Mvc;
 
 namespace PokeList_WebApi.Controllers
 {
+    /// <summary>
+    /// HomeController
+    /// </summary>
     public class HomeController : Controller
     {
+        /// <summary>
+        /// Index
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
+            ViewBag.Title = "PokeList WebApi - Home";
 
             return View();
         }

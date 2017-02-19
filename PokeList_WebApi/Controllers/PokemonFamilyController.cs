@@ -8,8 +8,14 @@ using System.Web.Http;
 
 namespace PokeList_WebApi.Controllers
 {
+    /// <summary>
+    /// Pokemon Family (Pokemon + Next and Previous Evolution)
+    /// </summary>
     public class PokemonFamilyController : ApiController
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public PokemonFamilyController()
         {
             if (PokeDB.pokemonsEn == null)
@@ -28,7 +34,7 @@ namespace PokeList_WebApi.Controllers
         /// <summary>
         /// Return the pokemon and it's next and previous Evolution
         /// </summary>
-        /// <returns>List of attacks name</returns>
+        /// <returns>List of Pokemon</returns>
         public List<Pokemon> Get(int id)
         {
             List<Pokemon> family = new List<Pokemon>();
@@ -58,7 +64,7 @@ namespace PokeList_WebApi.Controllers
         /// <summary>
         /// Return the id of pokemon and it's next and previous Evolution ids
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="id">Id of Pokemon (Exemple : 25 is the id of Pikachu</param>
         /// <returns></returns>
         [ActionName("ids")]
         [Route("api/pokemonFamily/ids/{id}")]
