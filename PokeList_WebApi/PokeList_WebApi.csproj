@@ -212,6 +212,7 @@
     <Compile Include="Controllers\PokemonEnController.cs" />
     <Compile Include="Controllers\PokemonFamilyController.cs" />
     <Compile Include="Controllers\PokemonFrController.cs" />
+    <Compile Include="Controllers\PokemonPositionController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -224,6 +225,7 @@
     <Compile Include="Models\NextEvolutionRequirements.cs" />
     <Compile Include="Models\PokeDB.cs" />
     <Compile Include="Models\Pokemon.cs" />
+    <Compile Include="Models\PokemonPosition.cs" />
     <Compile Include="Models\PreviousEvolution.cs" />
     <Compile Include="Models\SpecialAttack.cs" />
     <Compile Include="Models\Weight.cs" />

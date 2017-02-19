@@ -627,6 +627,24 @@
             <param name="input"></param>
             <returns></returns>
         </member>
+        <member name="T:PokeList_WebApi.Controllers.PokemonPositionController">
+            <summary>
+            Pokemon Position Controller
+            </summary>
+        </member>
+        <member name="M:PokeList_WebApi.Controllers.PokemonPositionController.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:PokeList_WebApi.Controllers.PokemonPositionController.Get(System.String,System.String)">
+            <summary>
+            Get a list of position of pokemon neor the user
+            </summary>
+            <param name="longitude">Longitude of the position of the Pokemon</param>
+            <param name="latitude">Latitude of the position of the Pokemon</param>
+            <returns>PokemonPosition</returns>
+        </member>
         <member name="T:PokeList_WebApi.Models.PokeDB">
             <summary>
             PokeList DataBase (From Json String)
@@ -735,6 +753,34 @@
         <member name="P:PokeList_WebApi.Models.Pokemon.maxHP">
             <summary>
             Max HP of the Pokemon
+            </summary>
+        </member>
+        <member name="T:PokeList_WebApi.Models.PokemonPosition">
+            <summary>
+            Pokemon position data
+            </summary>
+        </member>
+        <member name="M:PokeList_WebApi.Models.PokemonPosition.#ctor(System.Int32,System.Double,System.Double)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="number">Id of Pokemon (Exemple : 25 is the id of Pikachu</param>
+            <param name="latitude">Latitude of the position of the Pokemon</param>
+            <param name="longitude">Longitude of the position of the Pokemon</param>
+        </member>
+        <member name="P:PokeList_WebApi.Models.PokemonPosition.number">
+            <summary>
+            Id (or number) of the Pokemon
+            </summary>
+        </member>
+        <member name="P:PokeList_WebApi.Models.PokemonPosition.latitude">
+            <summary>
+            Latitude of the position of the Pokemon
+            </summary>
+        </member>
+        <member name="P:PokeList_WebApi.Models.PokemonPosition.longitude">
+            <summary>
+            Latitude of the position of the Pokemon
             </summary>
         </member>
     </members>
