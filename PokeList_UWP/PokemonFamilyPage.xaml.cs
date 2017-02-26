@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -45,6 +46,8 @@ namespace PokeList_UWP
             if(e.Parameter != null)
             {
                 await PokeDataLayer.getPokemonFamiliy(Convert.ToInt32((e.Parameter as Pokemon).number), this.currentPokemons);
+                this.pokemonFamilyPivot.Background = new SolidColorBrush(Colors.DarkGray);
+                this.pokemonFamilyPivot.Foreground = new SolidColorBrush(Colors.White);
                 int i = 0;
                 foreach (Pokemon pokemon in this.currentPokemons)
                 {
@@ -53,6 +56,8 @@ namespace PokeList_UWP
                     frame.Navigate(typeof(FeaturePage), pokemon);
                     frame.Margin = new Thickness(0);
                     frame.Padding = new Thickness(0);
+                    pivotItem.Margin = new Thickness(0);
+                    pivotItem.Padding = new Thickness(0);
                     pivotItem.Content = frame;
                     pivotItem.Header = pokemon.name;
                     if(Convert.ToInt32((e.Parameter as Pokemon).number) == Convert.ToInt32(pokemon.number))
