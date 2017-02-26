@@ -8,6 +8,13 @@
     mc:Ignorable="d"
     Loaded="Page_Loaded">
 
+    <Page.Resources>
+        <SolidColorBrush Color="#FF871c1c" x:Key="appColor"/>
+        <SolidColorBrush Color="#FF641818" x:Key="appColorDark"/>
+        <SolidColorBrush Color="#FF461212" x:Key="appColorHover"/>
+        <SolidColorBrush Color="#FF2E0C0C" x:Key="appColorPressed"/>
+    </Page.Resources>
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     </Grid>
