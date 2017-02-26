@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Navigation;
 
 // Pour plus d'informations sur le modèle d'élément Page vierge, consultez la page http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
-namespace PokeList_UWP
+namespace SwipeableSplitView_UWP
 {
     /// <summary>
     /// Une page vide peut être utilisée seule ou constituer une page de destination au sein d'un frame.
@@ -25,11 +25,6 @@ namespace PokeList_UWP
         public MainPage()
         {
             this.InitializeComponent();
-        }
-
-        private void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(RootPage));
         }
     }
 }

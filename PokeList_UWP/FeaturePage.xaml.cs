@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PokeList_Model;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -13,23 +14,32 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// Pour plus d'informations sur le modèle d'élément Page vierge, consultez la page http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
+// Pour plus d'informations sur le modèle d'élément Page vierge, voir la page http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace PokeList_UWP
 {
     /// <summary>
     /// Une page vide peut être utilisée seule ou constituer une page de destination au sein d'un frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class FeaturePage : Page
     {
-        public MainPage()
+        public Pokemon currentPokemon { get; set; }
+        public FeaturePage()
         {
             this.InitializeComponent();
         }
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if (e.Parameter != null)
+            {
+                this.currentPokemon = e.Parameter as Pokemon;
+            }
+        }
+
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(RootPage));
+            
         }
     }
 }

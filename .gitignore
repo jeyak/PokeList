@@ -6,3 +6,15 @@
 /PokeList_WebApi/bin
 /PokeList_WebApi/obj
 /PokeList_WebApi/Properties/PublishProfiles
+/PokeList_Model/obj/ARM/Debug
+/PokeList_Model/bin/ARM/Debug
+/PokeList_UWP/bin/ARM/Debug
+/PokeList_UWP/obj/ARM/Debug
+/PokeList_UWP/obj/x86/Debug/PokeList_UWP.csprojResolveAssemblyReference.cache
+/PokeList_UWP/obj/x86/Debug/PokeList_UWP.csproj.FileListAbsolute.txt
+/PokeList_UWP/obj/x86/Debug/RootPage.g.i.cs
+/PokeList_UWP/obj/x86/Debug/RootPage.g.cs
+/SwipeableSplitView_UWP/obj/x86/Debug
+/SwipeableSplitView_UWPClass/bin
+/SwipeableSplitView_UWPClass/obj
+/SwipeableSplitView_UWPClass
