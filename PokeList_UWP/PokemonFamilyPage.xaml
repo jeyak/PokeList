@@ -7,13 +7,14 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <RelativePanel>
-            <Pivot x:Name="pokemonFamilyPivot" 
-                   RelativePanel.AlignTopWithPanel="True"
-                   RelativePanel.AlignLeftWithPanel="True"
-                   RelativePanel.AlignRightWithPanel="True"
-                   RelativePanel.AlignBottomWithPanel="True"/>
-        </RelativePanel>
-    </Grid>
+    <RelativePanel 
+            Padding="0"
+            Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Pivot
+            x:Name="pokemonFamilyPivot" 
+            RelativePanel.AlignTopWithPanel="True"
+            RelativePanel.AlignLeftWithPanel="True"
+            RelativePanel.AlignRightWithPanel="True"
+            RelativePanel.AlignBottomWithPanel="True" />
+    </RelativePanel>
 </Page>

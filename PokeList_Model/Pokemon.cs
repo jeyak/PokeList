@@ -85,5 +85,13 @@ namespace PokeList_Model
                 return baseImgUrl + "/" + Convert.ToInt32(number).ToString() + ".png";
             }
         }
+
+        public string bgImageSource
+        {
+            get
+            {
+                return "/Assets/PokeTypes_BG/BG" + Tools.getEnTypesForString(this.type1) + ".png";
+            }
+        }
     }
 }

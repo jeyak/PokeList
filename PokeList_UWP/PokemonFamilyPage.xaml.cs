@@ -51,6 +51,8 @@ namespace PokeList_UWP
                     var pivotItem = new PivotItem();
                     var frame = new Frame();
                     frame.Navigate(typeof(FeaturePage), pokemon);
+                    frame.Margin = new Thickness(0);
+                    frame.Padding = new Thickness(0);
                     pivotItem.Content = frame;
                     pivotItem.Header = pokemon.name;
                     if(Convert.ToInt32((e.Parameter as Pokemon).number) == Convert.ToInt32(pokemon.number))

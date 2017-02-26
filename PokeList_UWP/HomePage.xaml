@@ -9,30 +9,24 @@
     mc:Ignorable="d"
     Loaded="Page_Loaded">
 
-    <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView RelativePanel.AlignBottomWithPanel="True"
+    <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                   Padding="0">
+        <GridView RelativePanel.AlignBottomWithPanel="True"
                   RelativePanel.AlignLeftWithPanel="True"
                   RelativePanel.AlignRightWithPanel="True"
                   RelativePanel.AlignTopWithPanel="True"
+                  Padding="0"
+                  Margin="0"
                   Name="lstvPokemon"
                   ItemsSource="{x:Bind pokemonList}"
                   SelectionChanged="lstvPokemon_SelectionChanged">
-            <ListView.ItemTemplate>
-                <DataTemplate x:DataType="model:Pokemon">
-                    <RelativePanel MinWidth="300">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Height="60" Width="60"
-                                   Source="{x:Bind spriteSource}"/>
-                            <TextBlock Text="{x:Bind name}"
-                                       FontSize="25"/>
-                        </StackPanel>
-                        <StackPanel RelativePanel.AlignRightWithPanel="True">
-                            <TextBlock Text="{x:Bind type1}" />
-                            <TextBlock Text="{x:Bind type2}" />
-                        </StackPanel>
-                    </RelativePanel>
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <local:PokemonListViewItemTemplate
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch" />
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+            </GridView.ItemTemplate>
+        </GridView>
     </RelativePanel>
 </Page>

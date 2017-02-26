@@ -75,32 +75,32 @@
             RelativePanel.AlignRightWithPanel="True"
             RelativePanel.Below="stckTitle">
             <SplitView.Pane>
-                <ListView>
-                    <ListViewItem>
+                <ListBox>
+                    <ListBoxItem>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock
                                 Text="Accueil" />
                         </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem>
+                    </ListBoxItem>
+                    <ListBoxItem>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock
                                 Text="Map" />
                         </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem>
+                    </ListBoxItem>
+                    <ListBoxItem>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock
                                 Text="Paramètre" />
                         </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem>
+                    </ListBoxItem>
+                    <ListBoxItem>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock
                                 Text="À Propos de ..." />
                         </StackPanel>
-                    </ListViewItem>
-                </ListView>
+                    </ListBoxItem>
+                </ListBox>
             </SplitView.Pane>
             <SplitView.Content>
                 <Frame x:Name="mainFrame" />

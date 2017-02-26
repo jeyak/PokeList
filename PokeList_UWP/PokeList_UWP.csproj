@@ -107,6 +107,9 @@
     <Compile Include="PokemonFamilyPage.xaml.cs">
       <DependentUpon>PokemonFamilyPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PokemonListViewItemTemplate.xaml.cs">
+      <DependentUpon>PokemonListViewItemTemplate.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RootPage.xaml.cs">
       <DependentUpon>RootPage.xaml</DependentUpon>
@@ -119,6 +122,22 @@
     <None Include="PokeList_UWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\PokeTypes_BG\BGBug.png" />
+    <Content Include="Assets\PokeTypes_BG\BGDragon.png" />
+    <Content Include="Assets\PokeTypes_BG\BGElectric.png" />
+    <Content Include="Assets\PokeTypes_BG\BGFairy.png" />
+    <Content Include="Assets\PokeTypes_BG\BGFighting.png" />
+    <Content Include="Assets\PokeTypes_BG\BGFire.png" />
+    <Content Include="Assets\PokeTypes_BG\BGFly.png" />
+    <Content Include="Assets\PokeTypes_BG\BGGhost.png" />
+    <Content Include="Assets\PokeTypes_BG\BGGrass.png" />
+    <Content Include="Assets\PokeTypes_BG\BGGround.png" />
+    <Content Include="Assets\PokeTypes_BG\BGIce.png" />
+    <Content Include="Assets\PokeTypes_BG\BGNormal.png" />
+    <Content Include="Assets\PokeTypes_BG\BGPoison.png" />
+    <Content Include="Assets\PokeTypes_BG\BGPsychic.png" />
+    <Content Include="Assets\PokeTypes_BG\BGRock.png" />
+    <Content Include="Assets\PokeTypes_BG\BGWater.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -149,6 +168,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="PokemonListViewItemTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="RootPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -162,9 +185,7 @@
       <Name>Windows Mobile Extensions for the UWP</Name>
     </SDKReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets\PokeTypes_BG\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\PokeList_Model\PokeList_Model.csproj">
       <Project>{064bbe52-b2ed-46fc-add7-8bfed3b8d75d}</Project>

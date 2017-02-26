@@ -9,6 +9,13 @@
     Loaded="Page_Loaded">
 
     <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Image
+            RelativePanel.AlignTopWithPanel="True"
+            RelativePanel.AlignBottomWithPanel="True" 
+            RelativePanel.AlignLeftWithPanel="True"
+            RelativePanel.AlignRightWithPanel="True"
+            Source="{x:Bind currentPokemon.bgImageSource}"
+            Stretch="UniformToFill"/>
         <Image Width="256"
                Height="256"
                Source="{x:Bind currentPokemon.imageSource}"
