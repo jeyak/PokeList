@@ -1,4 +1,5 @@
-﻿using PokeList_WebApi.Models;
+﻿using Newtonsoft.Json;
+using PokeList_WebApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +25,7 @@ namespace PokeList_WebApi.Controllers
                 if (PokeDB.pokemonsEn.Count == 0)
                 {
                     #region pokeJson Loading
-                    PokeDB.pokemonsEn = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Pokemon>>(PokeDB.pokeJsonEn);
+                    PokeDB.pokemonsEn = JsonConvert.DeserializeObject<List<Pokemon>>(PokeDB.pokeJsonEn);
                     #endregion
                 }
             }

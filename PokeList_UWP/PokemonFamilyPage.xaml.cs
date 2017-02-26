@@ -30,25 +30,16 @@ namespace PokeList_UWP
         {
             this.InitializeComponent();
             this.currentPokemons = new List<Pokemon>();
-            //var pivot1 = new PivotItem();
-            //pivot1.Header = "Pivot 1";
-            //pivot1.Content = new Frame();
-            //var pivot2 = new PivotItem();
-            //pivot2.Header = "Pivot 2";
-            //pivot2.Content = new Frame();
-            //this.pokemonFamilyPivot.Items.Add(pivot1);
-            //this.pokemonFamilyPivot.Items.Add(pivot2);
         }
 
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
-            base.OnNavigatedTo(e);
             if(e.Parameter != null)
             {
                 await PokeDataLayer.getPokemonFamiliy(Convert.ToInt32((e.Parameter as Pokemon).number), this.currentPokemons);
                 this.pokemonFamilyPivot.Background = new SolidColorBrush(Colors.DarkGray);
                 this.pokemonFamilyPivot.Foreground = new SolidColorBrush(Colors.White);
-                int i = 0;
+                int i = 0, n = 0;
                 foreach (Pokemon pokemon in this.currentPokemons)
                 {
                     var pivotItem = new PivotItem();
@@ -62,14 +53,14 @@ namespace PokeList_UWP
                     pivotItem.Header = pokemon.name;
                     if(Convert.ToInt32((e.Parameter as Pokemon).number) == Convert.ToInt32(pokemon.number))
                     {
-                        this.pokemonFamilyPivot.Items.Insert(0, pivotItem);
+                        n = i;
                     }
-                    else
-                    {
-                        this.pokemonFamilyPivot.Items.Add(pivotItem);
-                    }
+                    this.pokemonFamilyPivot.Items.Add(pivotItem);
+                    i++;
                 }
+                this.pokemonFamilyPivot.SelectedIndex = n;
             }
+            base.OnNavigatedTo(e);
         }
     }
 }
