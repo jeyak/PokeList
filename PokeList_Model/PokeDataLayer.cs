@@ -54,7 +54,7 @@ namespace PokeList_Model
         public async static Task getPokemonFamiliy(int id, List<Pokemon> list)
         {
             HttpClient client = new HttpClient();
-            IAsyncOperationWithProgress<HttpResponseMessage, HttpProgress> response = client.GetAsync(new Uri(baseApiUrl + "/pokemonFamily/" + id));
+            IAsyncOperationWithProgress<HttpResponseMessage, HttpProgress> response = client.GetAsync(new Uri(baseApiUrl + "/pokemonFamily" + language + "/" + id));
             IAsyncOperationWithProgress<string, ulong> jsonResponse = (await response).Content.ReadAsStringAsync();
             list.AddRange(JsonConvert.DeserializeObject<List<Pokemon>>(await jsonResponse));
         }
