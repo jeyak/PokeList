@@ -10,6 +10,14 @@
     <RelativePanel 
             Padding="0"
             Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Image 
+            RelativePanel.AlignTopWithPanel="True"
+            RelativePanel.AlignLeftWithPanel="True"
+            RelativePanel.AlignRightWithPanel="True"
+            RelativePanel.AlignBottomWithPanel="True"
+            x:Name="bgImage"
+            Source="{x:Bind currentPokemon.bgImageSource}"
+            Stretch="UniformToFill"/>
         <Pivot
             x:Name="pokemonFamilyPivot" 
             RelativePanel.AlignTopWithPanel="True"

@@ -22,3 +22,7 @@
 /PokeList_Model/bin/x64/Debug
 /PokeList_UWP/obj/x64/Debug
 /PokeList_UWP/bin/x64/Debug
+/PokeList_Model/bin/ARM/Release
+/PokeList_Model/obj
+/PokeList_UWP/bin/ARM/Release
+/PokeList_UWP/obj

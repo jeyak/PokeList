@@ -8,14 +8,14 @@
     mc:Ignorable="d"
     Loaded="Page_Loaded">
 
-    <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Image
+    <RelativePanel>
+        <!--<Image
             RelativePanel.AlignTopWithPanel="True"
             RelativePanel.AlignBottomWithPanel="True" 
             RelativePanel.AlignLeftWithPanel="True"
             RelativePanel.AlignRightWithPanel="True"
             Source="{x:Bind currentPokemon.bgImageSource}"
-            Stretch="UniformToFill"/>
+            Stretch="UniformToFill"/>-->
         <Image Width="256"
                Height="256"
                Source="{x:Bind currentPokemon.imageSource}"
@@ -25,10 +25,10 @@
                       RelativePanel.AlignRightWithPanel="True"
                       RelativePanel.AlignBottomWithPanel="True"
                       RelativePanel.AlignTopWithPanel="True">
-            <RelativePanel Margin="5 306 5 0"
+            <RelativePanel Margin="10 310 10 10"
                            Padding="15"
                            CornerRadius="10,10,10,10"
-                           Background="#7C999999">
+                           Background="#B2C8C8C8">
                 <TextBlock Text="{x:Bind currentPokemon.name}"
                            Name="pokemonName"
                            FontSize="30"

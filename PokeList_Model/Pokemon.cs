@@ -36,7 +36,7 @@ namespace PokeList_Model
         {
             get
             {
-                if (types.Count > 0)
+                if (types != null && types.Count > 0)
                 {
                     return types[0];
                 }
