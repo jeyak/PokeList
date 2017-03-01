@@ -211,6 +211,8 @@
     <Compile Include="Controllers\PokemonAttackController.cs" />
     <Compile Include="Controllers\PokemonEnController.cs" />
     <Compile Include="Controllers\PokemonFamilyController.cs" />
+    <Compile Include="Controllers\PokemonFamilyEnController.cs" />
+    <Compile Include="Controllers\PokemonFamilyFrController.cs" />
     <Compile Include="Controllers\PokemonFrController.cs" />
     <Compile Include="Controllers\PokemonPositionController.cs" />
     <Compile Include="Global.asax.cs">

@@ -574,6 +574,47 @@
             <param name="id">Id of Pokemon (Exemple : 25 is the id of Pikachu</param>
             <returns></returns>
         </member>
+        <member name="M:PokeList_WebApi.Controllers.PokemonFamilyEnController.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:PokeList_WebApi.Controllers.PokemonFamilyEnController.Get(System.Int32)">
+            <summary>
+            Return the pokemon and it's next and previous Evolution
+            </summary>
+            <returns>List of Pokemon</returns>
+        </member>
+        <member name="M:PokeList_WebApi.Controllers.PokemonFamilyEnController.GetIds(System.Int32)">
+            <summary>
+            Return the id of pokemon and it's next and previous Evolution ids
+            </summary>
+            <param name="id">Id of Pokemon (Exemple : 25 is the id of Pikachu</param>
+            <returns></returns>
+        </member>
+        <member name="T:PokeList_WebApi.Controllers.PokemonFamilyFrController">
+            <summary>
+            Pokemon Family (Pokemon + Next and Previous Evolution) (Fr version)
+            </summary>
+        </member>
+        <member name="M:PokeList_WebApi.Controllers.PokemonFamilyFrController.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:PokeList_WebApi.Controllers.PokemonFamilyFrController.Get(System.Int32)">
+            <summary>
+            Return the pokemon and it's next and previous Evolution
+            </summary>
+            <returns>List of Pokemon</returns>
+        </member>
+        <member name="M:PokeList_WebApi.Controllers.PokemonFamilyFrController.GetIds(System.Int32)">
+            <summary>
+            Return the id of pokemon and it's next and previous Evolution ids
+            </summary>
+            <param name="id">Id of Pokemon (Exemple : 25 is the id of Pikachu</param>
+            <returns></returns>
+        </member>
         <member name="T:PokeList_WebApi.Controllers.PokemonFrController">
             <summary>
             PokemonController (French version)
