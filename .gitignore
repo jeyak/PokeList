@@ -26,3 +26,5 @@
 /PokeList_Model/obj
 /PokeList_UWP/bin/ARM/Release
 /PokeList_UWP/obj
+/PokeList_Model/bin/x64/Release
+/PokeList_UWP/bin/x64/Release

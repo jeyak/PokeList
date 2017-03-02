@@ -6,10 +6,17 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    Padding="0"
+    Margin="0"
     d:DesignHeight="300"
     d:DesignWidth="400">
 
-    <RelativePanel Name="rltPanel" Height="200" Background="#19000000" Margin="0,5,0,0" >
+    <RelativePanel 
+        Name="rltPanel"
+        Height="220" 
+        Background="#19000000"
+        Margin="0"
+        Padding="0">
         <Image 
             Stretch="UniformToFill"
             x:Name="typeBG"
@@ -40,7 +47,10 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <Image Stretch="UniformToFill" Width="50" Height="50" Source="{x:Bind Pokemon.spriteSource}" />
+                <Image
+                    Stretch="UniformToFill"
+                    Width="55" Height="55" 
+                    Source="{x:Bind Pokemon.spriteSource}" />
                 <StackPanel
                     Grid.RowSpan="2"
                     Grid.Column="1"

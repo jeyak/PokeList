@@ -7,10 +7,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    Padding="0"
+    Margin="0"
     Loaded="Page_Loaded">
 
     <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-                   Padding="0">
+                   Padding="0"
+                   Margin="0">
         <GridView RelativePanel.AlignBottomWithPanel="True"
                   RelativePanel.AlignLeftWithPanel="True"
                   RelativePanel.AlignRightWithPanel="True"
@@ -22,9 +25,7 @@
                   SelectionChanged="lstvPokemon_SelectionChanged">
             <GridView.ItemTemplate>
                 <DataTemplate>
-                    <local:PokemonListViewItemTemplate
-                        HorizontalAlignment="Stretch"
-                        VerticalAlignment="Stretch" />
+                    <local:PokemonListViewItemTemplate />
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>
