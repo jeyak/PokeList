@@ -11,7 +11,16 @@ namespace PokeList_WebApi.Models
     public class Pokemon
     {
         /// <summary>
-        /// Id (or number) of the Pokemon
+        /// Id of the Pokemon
+        /// </summary>
+        public int id {
+            get
+            {
+                return Convert.ToInt32(this.number);
+            }
+        }
+        /// <summary>
+        /// Number of the Pokemon
         /// </summary>
         public string number { get; set; }
         /// <summary>
